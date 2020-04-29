@@ -50,4 +50,4 @@ elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
 endif ()
 
 # IDEs should put the headers in a nice place
-source_group(TREE "${PROJECT_SOURCE_DIR}/include" PREFIX "Header Files" FILES ${HEADER_LIST})
+source_group(TREE "../../../include" PREFIX "Header Files" FILES ${HEADER_LIST})
