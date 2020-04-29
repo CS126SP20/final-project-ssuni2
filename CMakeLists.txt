@@ -87,3 +87,15 @@ if(NOT catch2_POPULATED)
 endif()
 
 # Add more CMake libraries here ...
+
+list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
+# Replace <CMAKE_MODULE_DIR> with your path
+# The most common path is ${PROJECT_SOURCE_DIR}/cmake/Modules
+
+# set variables for external dependencies
+set(EXTERNAL_DIR "${PROJECT_SOURCE_DIR}/external"
+        CACHE PATH "Location where external dependencies will installed")
+set(DOWNLOAD_LOCATION "${EXTERNAL_DIR}/src"
+        CACHE PATH "Location where external projects will be downloaded")
+mark_as_advanced(EXTERNAL_DIR DOWNLOAD_LOCATION)
+include_directories(${EXTERNAL_DIR}/include)
